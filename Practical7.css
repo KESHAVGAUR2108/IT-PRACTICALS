@@ -1,0 +1,46 @@
+*{
+    margin:0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.container{
+    margin: auto;
+    border: 3px solid rgb(7, 7, 7);
+    width: 25%;
+    padding: 10px;
+    margin-top: 20px;
+}
+table{
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    font-weight :bold;
+    font-size: 20px;
+}
+tr,td{
+    padding: 5px;
+    border-bottom: 1px dashed black;
+}
+h1{
+    position: sticky;
+    top: 0;
+}
+h1,h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    background-color: rgba(36, 172, 206, 0.89);
+    margin-bottom: 15px;
+}
+h2{
+    background-color:rgb(42, 206, 198) ;
+}
+
+#btn{
+    position: relative;
+    left: 92%;
+    background-color:rgb(19, 19, 184);
+    border-radius: 7px;
+    font-size: 20px;
+    color:white;
+    letter-spacing: 2px;
+    padding: 4px;
+}

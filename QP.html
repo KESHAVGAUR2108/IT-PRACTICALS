@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <thead>
+        <tr>
+            <td>Index</td>
+            <td>Name</td>
+            <td>State</td>
+            <td>Speciality</td>
+        </tr>
+        </thead>
+        <tr id ='row0'>
+            <td>0</td>
+            <td>Jim Corbett National Park</td>
+            <td>Uttarakhand</td>
+            <td>Tigers</td>
+        </tr>
+        <tr id ='row1'>
+            <td>1</td>
+            <td>Kaziranga National Park</td>
+            <td>Assam</td>
+            <td>Rhinos</td>
+        </tr>
+    </table>
+    <br><br>
+    <label for="index">Enter Index : </label>
+    <input type="number" id="index"><br><br>
+    <label for="propertyName">Enter property Name : </label>
+    <input type="text" id="propertyName"><br><br>
+    <button id ="submitBtn">Submit</button>
+
+    <br><br>
+    <p>Value : <em id="value"></em></p>
+
+
+    <script>
+        arr = [{name : 'JimC',state : 'UK',speciality:'Tigers'},
+                {name : 'Kaziranga',state : 'Assam',speciality:'Rhinos'}
+            ]
+
+        var btn = document.getElementById('submitBtn')
+        btn.addEventListener('click',process)
+
+        function process(){
+            var indx = document.getElementById('index').value
+            console.log(indx)
+            var propName = document.getElementById('propertyName').value
+            document.getElementById('value').innerText = arr[indx][propName]
+        }
+        
+    </script>
+
+</body>
+</html>

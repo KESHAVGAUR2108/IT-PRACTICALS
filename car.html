@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <label for="manufacturerName">Name of the manufacturer :</label>
+        <input type="text" id="manufacturerName"><br><br>
+        <label for="modelName">Name of the model : </label>
+        <input type="text" id="modelName"><br><br>
+        <label for="mfgYear">Manufacturer Year : </label>
+        <input type="text" id="mfgYear"><br><br>
+
+        <label>Fuel type : </label>
+        <label for="disl">Diesel</label>
+        <input type="radio" name = "fuelType" id="disl" value="diesel">
+        <label for="ptrl">Petrol</label>
+        <input type="radio" name="fuelType" id="ptrl" value="petrol">
+        <br><br>
+        
+        <label for="color">Color : </label>
+        <input type="color" id="color"><br><br>
+        <label for="seatingCapacity">Seating Capacity : </label>
+        <input type="number" id="seatingCapacity"><br><br>
+        <label for="cubicCapacity">Cubic capacity : </label>
+        <input type="numeric" id = "cubicCapacity"><br><br>
+    </form>
+    <button id="submitBtn">submit</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        var btn = $('#submitBtn').on('click',getCarDetails)
+        
+        //create object
+        carObj = {};
+        function getCarDetails(){
+            // set properties and values in car object
+            carObj['ManufacturerName'] = $('form')[0][0].value;
+            carObj['ModeName'] = $('form')[0][1].value;
+            carObj['ManufacturerYear'] = $('form')[0][2].value;
+            
+            if($('form')[0][3].checked){
+                carObj['FuelType'] = $('form')[0][3].value;
+            }
+            else if($('form')[0][4].checked){
+                carObj['FuelType'] = $('form')[0][4].value;
+            }
+
+            carObj['Color'] = $('form')[0][5].value;
+            carObj['Seating Capacity'] = $('form')[0][6].value;
+            carObj['Cubic Capacity'] = $('form')[0][7].value;
+
+            // display car object
+            console.log(carObj)
+            console.log(JSON.stringify(carObj))    //convert obj into json
+        }
+    </script>
+    </form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page_1</title>
+</head>
+<body>
+
+    <form action="page2.html" target="_blank">
+    
+    <!-- <form > -->
+        <fieldset>
+            <legend>FILL</legend>
+            <input type="text" id="userName" name="userName" placeholder="xyz@gmail.com"><br>
+            <input type="password" name="password" placeholder="password" id="passw"><br>
+            <input type="submit" value="LogIn" onclick="process()"><br>
+        </fieldset>
+        
+    </form>
+
+    <label id="printName"></label>
+    <label id="msg"></label>
+
+    <script>
+        function process(){
+            let name = document.getElementById('userName').value;
+            let password = document.getElementById('passw').value;
+            
+            localStorage.setItem('Name',name);
+            localStorage.setItem('Password',password);
+            
+            return;
+
+            // document.getElementById('printName').innerText = name;
+
+            // if (password == '123456'){
+            //     document.getElementById('msg').innerText = 'Successfully Login'
+            // }
+            // else{
+            //     document.getElementById('msg').innerText = 'Wrong Password'
+            // }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page_2</title>
+</head>
+<body>
+    <em>User Name : </em><label id="printName"></label><br>
+    <em>Password : </em><label id="printPassw"></label>
+
+    <script>
+        window.addEventListener('load',()=>{
+            // const params = (new URL(document.location)).searchParams;
+            // const name = params.get('userName');
+            // const passW = params.get('password');
+
+            const name = localStorage.getItem('Name');
+            const passW = localStorage.getItem('Password');
+
+            document.getElementById('printName').innerHTML = name;
+            document.getElementById('printPassw').innerHTML = passW;
+        })
+    </script>
+</body>
+</html>
